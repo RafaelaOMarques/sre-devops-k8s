@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fastapi-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+    targetRevision: main
+    path: k8s  # Pasta onde estão seus arquivos (deployment, service, hpa)
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: projeto-fastapi
+  
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: fastapi-app
+      jsonPointers:
+        - /spec/replicas
