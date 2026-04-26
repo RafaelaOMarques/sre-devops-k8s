@@ -15,4 +15,5 @@ spec:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 50 # Escala se passar de 50% de uso de CPU
+        averageUtilization: 80
+        
