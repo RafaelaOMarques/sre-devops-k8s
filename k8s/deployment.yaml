@@ -16,6 +16,7 @@ spec:
       containers:
       - name: fastapi-container
         image: fastapi-lab:v1
+        imagePullPolicy: Never
         ports:
         - containerPort: 8000
         resources:
