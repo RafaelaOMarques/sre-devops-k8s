@@ -1,0 +1,18 @@
+[project]
+name = "fastapi-app"
+version = "1.0.0"
+description = "Projeto experimental de boas práticas em DevOps/SRE"
+authors = [
+    {name = "RafaelaOMarques",email = "rafaelao.marques@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi (==0.121.0)",
+    "uvicorn (==0.35.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
