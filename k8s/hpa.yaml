@@ -1,5 +1,5 @@
 apiVersion: autoscaling/v2
-kind: HPA
+kind: HorizontalPodAutoscaler
 metadata:
   name: fastapi-hpa
 spec:
