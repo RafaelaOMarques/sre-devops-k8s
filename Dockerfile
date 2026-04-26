@@ -1,11 +1,16 @@
 # Dockerfile
 FROM python:3.9-slim
 
+RUN pip install --no-cache-dir poetry
+
 WORKDIR /app
 
-COPY . .
+COPY pyproject.toml poetry.lock* /app/
 
-RUN pip install -r requirements.txt
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi --no-root
+
+COPY . /app
 
 EXPOSE 8000
 
