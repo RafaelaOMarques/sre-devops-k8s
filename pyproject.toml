@@ -1,6 +1,6 @@
 [project]
 name = "fastapi-app"
-version = "1.0.1"
+version = "1.0.2"
 description = "Projeto experimental de boas práticas em DevOps/SRE"
 authors = [
     {name = "RafaelaOMarques",email = "rafaelao.marques@gmail.com"}
