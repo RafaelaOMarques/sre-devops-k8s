@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: fastapi-container
-        image: fastapi-lab:latest
+        image: ghcr.io/rafaelaomarques/fastapi-lab:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 8000
