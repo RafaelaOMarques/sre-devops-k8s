@@ -1,5 +1,8 @@
 # Changelog de Implementações
 
+v1.0.3
+- Atualização versão do python no dockerfile
+
 v1.0.2
 - Atualização o main para uso adequado do GitActions
 
