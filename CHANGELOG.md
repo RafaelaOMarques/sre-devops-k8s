@@ -1,5 +1,8 @@
 # Changelog de Implementações
 
+v1.0.4
+- Sincronização do actions
+
 v1.0.3
 - Atualização versão do python no dockerfile
 
